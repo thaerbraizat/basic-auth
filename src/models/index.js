@@ -5,7 +5,7 @@ const UserSchema=require('./sign');
 const POSTGRES_URL =
   process.env.NODE_ENV === "test"
     ? "sqlite:memory"
-    : process.env.DATABASE_URL;
+    : "postgres://localhost:5432/thaerbraizat";
 
 const {Sequelize,DataTypes}=require('sequelize');
 
