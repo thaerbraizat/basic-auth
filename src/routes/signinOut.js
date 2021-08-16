@@ -21,7 +21,7 @@ async function signUp(req,res){
         });
         res.json(record);
     } catch (error) {
-        console.log(error);
+        
         res.status(200).send("can not create a user!!");
     }
 }
