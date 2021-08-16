@@ -13,7 +13,7 @@ const basicAuth = async (req, res, next) => {
     let decoded = base64.decode(encoded);
     let [username, password] = decoded.split(":");
     try {
-      console.log(users.findAll());
+    
       const user = await users.findOne({ where: { username: username } });
       const valid = await bcrypt.compare(password, user.password);
       if (valid) {
